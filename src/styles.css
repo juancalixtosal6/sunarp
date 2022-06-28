@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "ubuntubold";
+    src: url("assets/fonts/bold/tacho/ubuntu-bold.woff2") format("woff2"),
+      url("assets/fonts/bold/ubuntu-bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ubuntulight";
+    src: url("assets/fonts/light/ubuntu-light.woff2") format("woff2"),
+      url("assets/fonts/light/ubuntu-light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "ubuntulight_italic";
+    src: url("assets/fonts/lightItalic/ubuntu-lightitalic.woff2") format("woff2"),
+      url("assets/fonts/lightItalic/ubuntu-lightitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Ubuntu-Regular";
+    src: url("assets/fonts/regular/Ubuntu-Regular.eot")
+        format("embedded-opentype"),
+      url("assets/fonts/regular/ubuntu-regular.woff") format("woff"),
+      url("assets/fonts/regular/Ubuntu-Regular.ttf") format("truetype"),
+      url("assets/fonts/regular/Ubuntu-Regular.svg#Ubuntu-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -1,0 +1,114 @@
+
+.divisotipo {
+  height: auto;
+
+  img {
+    width: 150px;
+    height: auto;
+  }
+}
+.contentLetras{
+  justify-content: center;
+}
+.logo-onpe{
+  padding-left: 15px;
+}
+h1.welcome {
+  font-size: 46px;
+  color: #8CB3DB;
+  font-weight: 800;
+  margin: 20px;
+  line-height: 1.2;
+}
+.contentLogoV{
+  position: relative;
+  padding-left: 11px;
+  border-left: 2px solid;
+  border-color: white;
+  height: 50px;
+  line-height: 11px;
+  box-sizing: border-box;
+}
+.contentLogoV span{
+  color: white;
+  /* position: absolute; */
+  right: 0px;
+  bottom: 0px;
+  padding-left: 15px;
+  padding-top: 36px;
+}
+.contentLogoV img{
+  position: relative;
+  top: 10px;
+}
+
+.txtclr_white {
+  color: #fff;
+}
+.txt_center {
+  text-align: center;
+}
+.cs_infoboxes {
+  height: 150px;
+}
+.logo-eleccion{
+  display: block;
+  text-align: center;
+}
+
+.petit_box img {
+  filter: brightness(0) invert(1);
+}
+// .main-container {
+//   margin: 0 0 40px;
+// }
+
+
+@media (max-width: 960px) {
+  .cs_infoboxes {
+    height: 258px;
+  }
+  .onperlay_colorinche {
+
+    height: 123%!important;
+  }
+  .loadingetlv{
+    height: 123%!important;
+  }
+}
+@media (max-width: 600px) {
+  .onperlay_colorinche {
+
+    height: 115%;
+  }
+  .welcome{
+    font-size:33px!important;
+    margin: 20px 20px 0 20px!important;
+  }
+  .logo-onpe{
+    padding-left: 0px!important;
+  }
+  .contentLogoV img{
+    top: 0px!important;
+    height: 55%!important;
+    width: 100%!important;
+  }
+  .contentLogoV span{
+    padding-left: 0px;
+    top: 5px!important;
+    line-height: 14px;
+    font-size: 13px;
+    padding-top: 0px;
+  }
+  /* .loadingetlv{
+      height: 115%!important;
+  } */
+}
+@media (max-width: 400px) {
+  .onperlay_colorinche {
+    height: 132% !important;
+  }
+  .loadingetlv{
+    height: 132% !important;
+  }
+}

@@ -1,0 +1,11 @@
+<h3>
+    Su sesión está apunto de terminar ¿Desea continuar?
+</h3>
+<p style="text-align: center; font-weight: bold;font-size: 24px;height: 40px;">
+    {{timer}}
+</p>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <button mat-raised-button class="btnCancelar" (click)="onNoClick();" >NO</button>
+    <button mat-raised-button class="btnConfirmar"[mat-dialog-close]="true" (click)="pauseTimer()">SÍ</button>
+</div>

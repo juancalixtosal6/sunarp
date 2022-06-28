@@ -1,0 +1,8 @@
+<div fxLayout="column" style="width: 100%;height: 100vh; overflow: auto;">
+  <div class="loadingetlvint" *ngIf="isLoading()">
+  </div>
+  <section class="cs_principal" fxLayout="column" fxFlex>
+    <router-outlet></router-outlet>
+  </section>
+</div>
+

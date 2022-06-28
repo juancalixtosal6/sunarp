@@ -1,0 +1,460 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+@import '~@angular/material/theming';
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.bubble.css';
+@import '~quill/dist/quill.snow.css';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$front-primary: mat-palette($mat-indigo,500,600);
+$front-accent: mat-palette($mat-indigo, 700, 900, 900);
+
+// The warn palette is optional (defaults to red).
+$front-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$front-theme: mat-light-theme($front-primary, $front-accent, $front-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($front-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html{
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* background: url(./assets/images/bg_001.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  */ 
+  background: #f7f7f7;
+}
+/******************************************
+General Classes (Ini)
+******************************************/ 
+.genSunarp{
+  
+}
+#sunarpHeader{
+  background: #f7f7f7;
+  height: 84px;
+  border-bottom: #9a9a9a solid 1px;
+}
+#sunarpBody{
+
+}
+#sunarpSidebar{
+
+}
+#sunarpCorpus{
+
+}
+#sunarpFooter{
+  background: #d7d7d7;
+  height: 60px;
+}
+.padd15{
+  padding: 15px;
+}
+.paddT15{
+  padding-top: 15px;
+}
+.genTit{
+  font-size: 22px;
+  font-weight: 700;
+}
+.genSubTit{
+  font-size: 18px;
+}
+.genTxt{
+  font-size: 14px;
+}
+a.genlink{
+  font-size: 14px;
+  text-decoration: none;
+  color: blue;
+}
+.infoUser{
+  padding: 8px 0;
+  border-right: #9a9a9a solid 1px;
+}
+/******** General Classes (Fin) ********/
+/****************************************
+Menu (Ini)
+****************************************/ 
+.menuBox{
+  padding: 0 8px;
+  min-height: 40px;
+}
+.menuSubBox{
+  background-color: #d7d7d7;
+  padding: 4px 0 4px 8px;
+}
+.menuSec{
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #d7d7d7;
+  color: #000000;
+}
+.menuTit{
+  font-size: 18px;
+  font-weight: 700;
+  background: #555555;
+  color: #FFFFFF;
+  margin-bottom: 1px;
+}
+.menuSub{
+  font-size: 14px;
+  font-weight: 400;
+  background: #aaaaaa;
+  color: #000000;
+  margin: 4px 0;
+}
+.menuSub:hover{
+  font-size: 14px;
+  font-weight: 400;
+  background: #aaaaaa;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.menuSub.active{
+  font-size: 14px;
+  font-weight: 400;
+  background: #aaaaaa;
+  color: #FFFFFF;
+}
+.searchLimit{
+  max-width: 250px;
+}
+/************* Menu (Fin) **************/ 
+/***************************************
+Filter Sec ({
+***************************************/ 
+.filterSec{
+  padding: 15px 0;
+}
+.smallSel{
+  max-width: 200px;
+}
+.cubeFolio{
+  width: 200px;
+  height: auto;
+  border: #9a9a9a solid 1px;
+}
+.cubeFolioT{
+  height: 32px;
+  background: #aaaaaa;
+}
+.cubeFolioB{
+  height: 32px;
+  background: #FFFFFF;
+}
+/********* Filter Sec (Fin) ***********/
+/***************************************
+Pseudo Step (Ini)
+***************************************/ 
+/*
+.contentPseudosteps{
+  padding: 15px 0;
+}
+.pseudoStep{
+  width: 100%;
+  border: #71777d solid 1px;
+}
+.pseudoStep .normalSp{
+  background: #aaaaaa;
+  color: #000000;
+  padding: 10px 10px;
+}
+.pseudoStep .active{
+  background: #169bd5;
+  color: #FFFFFF;
+}
+.psUno{
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+.psDos{
+  height: 40px;
+}
+*/
+/********* Pseudo Step (Fin) **********/ 
+/***************************************
+Tabs (Ini)
+***************************************/ 
+.yellowTab{
+  background: #ffff80;
+}
+.borderTTab{
+  height: 15px;
+  background: #f2f2f2;
+}
+.contentYtab{
+  padding: 15px;
+}
+.formsContent{
+  padding-right: 15px;
+}
+.rowForms{
+  margin-bottom: 2px;
+}
+.formSubTitle{
+  padding: 20px 0 5px;
+  font-weight: 500;
+}
+.formSubTitleGros{
+  font-size: 18px;
+  padding: 20px 0 5px;
+  font-weight: 500;
+  border-bottom: #000000 solid 1px;
+}
+.spMiniTxt{
+  padding-right: 8px;
+}
+.spMiniComp{
+  padding-right: 15px;
+}
+
+/*
+.sunarpTab.nav-tabs .nav-link.active{
+  color: #000000; 
+}
+*/
+.sunarpTab.nav-tabs .nav-link{
+  color: #666666 !important;
+}
+.sunarpTab.nav-tabs .nav-link.active{
+  color: #000000 !important;
+  background-color: #f2f2f2 !important;
+  border-color: #dee2e6 #dee2e6 #f2f2f2;
+}
+/************* Tabs (fin) *************/ 
+/***************************************
+Botones (Ini)
+***************************************/ 
+.rowBnts{
+  padding: 10px 0;
+}
+.btnMinW{
+  min-width: 150px;
+}
+.btnMinMrg{
+  margin: 0 4px;
+}
+.microBtn{
+  padding: 0;
+  max-width: 30px;
+  min-width: 30px;
+}
+.btn-circle{
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  background: #169bd5;
+  color: #FFFFFF;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.btn-miniCircle{
+  width: 24px;
+  max-width: 24px;
+  min-width: 24px;
+  height: 24px;
+  min-height: 24px;
+  max-height: 24px;
+  background: #c4cbd2;
+  color: #000000;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+.btn-miniCircle .material-icons{
+  font-size: 14px;
+}
+.contentCircle{
+  padding-left: 10px;
+}
+/*********** Botones (Fin) ************/
+/***************************************
+Tabla Sunarp (Ini)
+***************************************/ 
+.sunarpTableBg{
+  background: #FFFFFF;
+}
+.sunarpTableBg th{
+  background: #555555;
+  color: #FFFFFF;
+  font-weight: 400;
+  text-align: center;
+}
+/********* Tabla Sunarp (Fin) *********/
+/***************************************
+Menu Flechas (Ini)
+***************************************/ 
+.arrow {
+  font-size: 0;
+}
+.arrow .inner-arrow {
+  min-width:210px;
+  height:60px;
+  display: inline-block;
+  background-color:#FFFFFF;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  line-height:40px;
+  vertical-align: middle;
+}
+.arrow.active .inner-arrow {
+  min-width:210px;
+  height:60px;
+  display: inline-block;
+  background-color:#169bd5;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  line-height:40px;
+  vertical-align: middle;
+}
+.arrow:before{
+  content:'';
+  width:0;
+  height:0;
+  border:30px solid #169bd5; 
+  vertical-align: middle;
+}
+.arro.active:before{
+  content:'';
+  width:0;
+  height:0;
+  border:30px solid #169bd5; 
+  vertical-align: middle;
+}
+.arrow:first-child:before{
+  content:'';
+  width:0;
+  height:0;
+  border:30px solid #FFFFFF; 
+  vertical-align: middle;
+}
+.arrow:after {
+  content:'';
+  width:0;
+  height:0;
+  border:30px solid #169bd5;
+  vertical-align: middle;
+}
+.arrow:last-child:after {
+  content:'';
+  width:0;
+  height:0;
+  border:30px solid #2fd516;
+  vertical-align: middle;
+}
+.arrow:before {
+  border-top-color: #CBCBCB;
+  border-bottom-color: #CBCBCB;
+  border-right-color: #CBCBCB;
+}
+.arrow:after {
+  border-left-color: #CBCBCB;
+}
+.contentSizer{
+  padding: 10px 0;
+}
+.fontSizer0{
+  font-size: 40px;
+  font-weight: 500;
+  padding-right: 10px;
+}
+.fontSizer1{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.fontSizer2{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+/********* Menu Flechas (Fin) *********/
+/***************************************
+HorizontalArrows (Ini)
+***************************************/ 
+.pseudoStep{
+  width: 100%;
+  border: #71777d solid 1px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.nArrow{
+  height: 60px;
+  padding-left: 30px;
+  position: relative;
+  overflow: visible;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.nArrow.active{
+  height: 60px;
+  padding-left: 30px;
+  position: relative;
+  overflow: visible;
+  background-color: #169bd5;
+  color: #FFFFFF;
+}
+.nArrow:after {
+  content:'';
+  width:42px;
+  height:42px;
+  transform: rotate(45deg);
+  background-color: #FFFFFF;
+  position: absolute;
+  right: -20px;
+  top: 9px;
+}
+.nArrow.active:after {
+  content:'';
+  width:42px;
+  height:42px;
+  transform: rotate(45deg);
+  background-color: #169bd5;
+  position: absolute;
+  right: -20px;
+  top: 9px;
+}
+/******* HorizontalArrows (Ini) *******/ 
+/***************************************
+Box Noir (Ini)
+***************************************/ 
+.boxNoir{
+  border: #000000 solid 1px;
+  padding: 10px;
+}
+/********** Box Noir (Fin) ************/ 
