@@ -230,6 +230,14 @@ Tabs (Ini)
   font-weight: 500;
   border-bottom: #000000 solid 1px;
 }
+h5.formSubTitleGros{
+  font-size: 18px;
+  /* padding: 20px 0 5px; */
+  padding: 0;
+  font-weight: 500;
+  border: none;
+  margin-bottom: 0;
+}
 .spMiniTxt{
   padding-right: 8px;
 }
@@ -421,6 +429,15 @@ HorizontalArrows (Ini)
   background-color: #FFFFFF;
   color: #000000;
 }
+.nArrow:hover{
+  height: 60px;
+  padding-left: 30px;
+  position: relative;
+  overflow: visible;
+  background-color: #e1e1e1;
+  color: #000000;
+  cursor: pointer;
+}
 .nArrow.active{
   height: 60px;
   padding-left: 30px;
@@ -429,12 +446,31 @@ HorizontalArrows (Ini)
   background-color: #169bd5;
   color: #FFFFFF;
 }
+.nArrow:hover.active{
+  height: 60px;
+  padding-left: 30px;
+  position: relative;
+  overflow: visible;
+  background-color: #169bd5;
+  color: #FFFFFF;
+  cursor:default;
+}
 .nArrow:after {
   content:'';
   width:42px;
   height:42px;
   transform: rotate(45deg);
   background-color: #FFFFFF;
+  position: absolute;
+  right: -20px;
+  top: 9px;
+}
+.nArrow:hover:after {
+  content:'';
+  width:42px;
+  height:42px;
+  transform: rotate(45deg);
+  background-color: #e1e1e1;
   position: absolute;
   right: -20px;
   top: 9px;
@@ -458,3 +494,10 @@ Box Noir (Ini)
   padding: 10px;
 }
 /********** Box Noir (Fin) ************/ 
+/***************************************
+CustomModal (Ini)
+***************************************/ 
+.modal-content.ambar{
+  background-color: #ffff80;
+}
+/********* CustomModal (Fin) **********/ 

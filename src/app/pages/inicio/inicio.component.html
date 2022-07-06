@@ -1,3 +1,27 @@
+<!-- 
+<script>
+  const div = document.querySelector("div");
+  document.querySelector(".hide").addEventListener("click", () => {
+    div.classList.add("div_hide");
+  });
+
+  document.querySelector(".show").addEventListener("click", () => {
+    div.classList.remove("div_hide");
+  });
+</script>
+-->
+<!-- 
+<button class="hide" >Ocultar</button>
+<button class="show">Mostrar</button>
+<div class="div" >
+  <p>Este es el div que se debe ocultar y mostrar condicionalmente usando javascript</p>
+</div>
+
+<div href="#" (click)="mostrarOcultar();">{{mensaje_enlace}}</div>
+<div *ngIf="mostrar">
+  <p>{{mensaje}}</p>
+</div>
+-->
 <div id="genSunarp">
   <div id="sunarpHeader" fxLayout="row">
     <div class="">
@@ -144,7 +168,7 @@
         </div>
         <div class="contentPseudosteps">
           <div class="pseudoStep"  fxLayout="row">
-            <div class="nArrow " fxLayout="row" fxFlex="33.333" style="z-index: 82;">
+            <div class="nArrow " fxLayout="row" fxFlex="33.333" style="z-index: 82;" (click)="mostrarOcultar(1);" [ngClass]="{'active':mostrarPaso1}">
               <div fxLayout="row">
                 <div fxLayout="row" fxLayoutAlign="start center" class="fontSizer0">
                   1
@@ -161,7 +185,7 @@
                 </div>
               </div>
             </div>
-            <div class="nArrow active" fxLayout="row" fxFlex="33.333" style="z-index: 81;">
+            <div class="nArrow" fxLayout="row" fxFlex="33.333" style="z-index: 81;" (click)="mostrarOcultar(2);" [ngClass]="{'active':mostrarPaso2}">
               <div fxLayout="row">
                 <div fxLayout="row" fxLayoutAlign="start center" class="fontSizer0">
                   2
@@ -178,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="nArrow " fxLayout="row" fxFlex="33.333" style="z-index: 80;">
+            <div class="nArrow " fxLayout="row" fxFlex="33.333" style="z-index: 80;" (click)="mostrarOcultar(3);" [ngClass]="{'active':mostrarPaso3}">
               <div fxLayout="row">
                 <div fxLayout="row" fxLayoutAlign="start center" class="fontSizer0">
                   3
@@ -198,7 +222,7 @@
           </div>
         </div>
         <!-- Tabs (Ini) -->
-        <div id="paso_01">
+        <div id="paso_01" *ngIf="mostrarPaso1">
           <ul class="nav sunarpTab nav-tabs" id="sunarpTab1" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Deudor Garante</button>
@@ -783,7 +807,7 @@
         <!-- Tabs (Fin) -->
 
         <!-- Tabs2 (Ini) -->
-        <div id="paso_02">
+        <div id="paso_02" *ngIf="mostrarPaso2">
           <ul class="nav sunarpTab nav-tabs" id="sunarpTab2" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="bienes-tab" data-bs-toggle="tab" data-bs-target="#bienes" type="button" role="tab" aria-controls="bienes" aria-selected="true">Bienes</button>
@@ -831,6 +855,7 @@
                           <div class="formSubTitleGros">
                             Bien Genérico
                           </div>
+                          <!-- 
                           <div class="formSubTitle">
                             Descripción
                           </div>
@@ -842,6 +867,44 @@
                               0/250
                             </div>
                           </div>
+                          -->
+                          <!-- Tabla de bienes (Ini) -->
+                          <div class="formSubTitle">
+                            Descripción de los Bienes en Garantía
+                          </div>
+                          <div>
+                            <div class="sunarpTable">
+                              <div class="table-responsive">
+                                <table class="table table-bordered sunarpTableBg">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Item</th>
+                                      <th scope="col">Cantidad</th>
+                                      <th scope="col">Descripción</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                    </tr>
+                                    <tr>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                    </tr>
+                                    <tr>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                      <td>sssss</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Tabla de bienes (Fin)-->
                           <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                             <label class="form-check-label" for="flexSwitchCheckChecked">Indicador de GMPA</label>
@@ -862,9 +925,9 @@
                             <button type="button" class="btn btn-primary btnMinW btnMinMrg">Guardar</button>
                           </div>
                         </div>
-                        <div class="boxNoir">
+                        <div class="boxNoir mt-3">
                           <div class="formSubTitleGros">
-                            Bien Genérico
+                            Bien Específico
                           </div>
                           <div fxLayout="row" class="paddT15">
                             <div fxFlex>
@@ -910,12 +973,67 @@
                               </div>
                             </div>
                             <div class="contentCircle">
-                              <button type="button" class="btn btn-circle" fxLayout="row" fxLayoutAlign="center center">
+                              <button type="button" class="btn btn-circle" fxLayout="row" fxLayoutAlign="center center" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <span class="material-icons">
                                   add
                                 </span>
                               </button>
                             </div>
+                            <!-- Modal (Ini) -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content ambar">
+                                  <div class="modal-header">
+                                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                                    <h5 class="modal-title formSubTitleGros" fxFlex>
+                                      Datos Adicionales
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div>
+                                      <div class="rowForms" fxLayout="row">
+                                        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center">
+                                          Zona:
+                                        </div>
+                                        <div fxFlex="50">
+                                          <input class="form-control form-control-sm" type="text" placeholder="ingresar ..." aria-label=".form-control-sm example">
+                                        </div>
+                                      </div>
+                                      <div class="rowForms" fxLayout="row">
+                                        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center">
+                                          Oficina Registral:
+                                        </div>
+                                        <div fxFlex="50">
+                                          <input class="form-control form-control-sm" type="text" placeholder="ingresar ..." aria-label=".form-control-sm example">
+                                        </div>
+                                      </div>
+                                      <div class="rowForms" fxLayout="row">
+                                        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center">
+                                          Placa / Matrícula:
+                                        </div>
+                                        <div fxFlex="50">
+                                          <input class="form-control form-control-sm" type="text" placeholder="ingresar ..." aria-label=".form-control-sm example">
+                                        </div>
+                                      </div>
+                                      <div class="rowForms" fxLayout="row">
+                                        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center">
+                                          Número de Partida:
+                                        </div>
+                                        <div fxFlex="50">
+                                          <input class="form-control form-control-sm" type="text" placeholder="ingresar ..." aria-label=".form-control-sm example">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer" fxLayout="row" fxLayoutAlign="center center">
+                                    <button type="button" class="btn btn-primary btnMinW btnMinMrg">Guardar</button>
+                                    <button type="button" class="btn btn-danger btnMinW btnMinMrg" data-bs-dismiss="modal">Cancelar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Modal (Fin) -->
                           </div>
                           <div class="formSubTitle">
                             Descripción
@@ -1057,8 +1175,13 @@
             </div>
           </div>
         </div>
-        
         <!-- Tabs2 (Fin) -->
+
+        <!-- Paso3 (Ini) -->
+        <div id="paso_03" *ngIf="mostrarPaso3">
+          &nbsp;
+        </div>
+        <!-- Paso3 (fin)-->
       </div>
     </div>
   </div>
